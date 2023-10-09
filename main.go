@@ -1,7 +1,6 @@
 package main
 
 import (
-	"context"
 	"fmt"
 )
 
@@ -20,5 +19,18 @@ func test() {
 }
 
 func main() {
-	context.Background()
+	a := struct {
+		name string
+	}{name: "aaa"}
+	// 把a复制了一份赋给了变量b
+	b := a
+	b.name = "111"
+	fmt.Println(a)
+	fmt.Println(b)
+
+	c := []int{1, 2, 3}
+	d := c
+	d[0] = 20
+	fmt.Println(c)
+	fmt.Println(d)
 }
