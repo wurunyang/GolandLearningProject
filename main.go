@@ -1,6 +1,7 @@
 package main
 
 import (
+	"awesomeProject/moduleDemo"
 	"fmt"
 )
 
@@ -33,4 +34,6 @@ func main() {
 	d[0] = 20
 	fmt.Println(c)
 	fmt.Println(d)
+
+	moduleDemo.Hello()
 }
