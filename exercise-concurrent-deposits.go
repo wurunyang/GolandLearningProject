@@ -22,7 +22,7 @@ func (a *Account) Add() {
 
 func main() {
 	account := &Account{count: 0}
-	// 增加协程计数器
+	// 增加协程计数器，防止主线程在子线程结束之前退出
 	wg := sync.WaitGroup{}
 	wg.Add(150)
 
